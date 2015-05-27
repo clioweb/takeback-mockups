@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  <meta name="author" content="{{ site.author }}">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Style Sheets -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css'>
+  <link rel="stylesheet" href="{{ site.baseurl }}/c/styles.css" type="text/css">
+
+</head>
+
+<body class="{{ page.bodyclass }}">
+  <header id="banner" role="banner">
+      <p>Take Back <i>the Archive</i></p>
+  </header>
+  <main id="main" role="main">
+    {{ content }}
+  </main>
+</body>
+</html>
+

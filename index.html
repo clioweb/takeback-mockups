@@ -1,0 +1,14 @@
+---
+layout: default
+bodyclass: 'home'
+---
+
+<ul class="posts">
+    {% for post in site.posts %}
+        <li>
+            <span class="eyebrow" aria-hidden="true">{{ post.category }}</span>
+            <a rel="permalink" href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+

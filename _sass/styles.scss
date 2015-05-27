@@ -1,0 +1,139 @@
+@import "base";
+
+// Colors
+$base-color                     : rgb(90,90,90);
+$base-color-light               : lighten($base-color, 10%);
+$base-color-lighter             : lighten($base-color, 20%);
+$base-color-lightest            : lighten($base-color, 30%);
+$base-color-dark                : darken($base-color, 10%);
+$base-color-darker              : darken($base-color, 20%);
+$base-color-darkest             : darken($base-color, 30%);
+
+$link-color                     : rgb(80,50,100);
+$link-visited-color             : $link-color;
+$link-hover-color               : darken($link-color, 10%);
+$link-focus-color               : $link-hover-color;
+$link-active-color              : $link-color;
+
+$advocacy-color: $link-color;
+$policy-color: darken(#38c, 10%);;
+$reporting-color: darken(#c50, 10%);
+
+@include establish-baseline();
+
+* {
+    text-rendering: optimizeLegibility;
+    @include box-sizing('border-box');
+}
+
+html {
+    margin:0;
+    padding:0;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    text-align:center;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $base-color-lighter;
+    @include margin-leader(2);
+    @include margin-trailer(2);
+}
+
+#main,
+#contentinfo {
+    padding-left: span(1 of 14 wide);
+    padding-right: span(1 of 14 wide);
+}
+
+#banner {
+    width: 100%;
+    background-color:white;
+    @include background-image(
+        linear-gradient(top, rgba(darken($link-color, 12%), .9), rgba($link-color, .8)),
+        url('../i/bg-large.jpg')
+    );
+    background-size: cover;
+    max-height: 120px;
+    min-height: 120px;
+    height: 20vh;
+    @include display-flex(flex);
+    @include align-items(flex-end);
+}
+
+#items {
+font-size: 0; display: flex; flex-flow: row wrap;
+
+    div {
+        width: 20px;
+        height: 30px;
+        margin: 2px;
+        background-color: $advocacy-color;
+    }
+
+    div:nth-child(2n) {
+        background-color: $advocacy-color;
+    }
+    div:nth-child(7n) {
+        background-color: $reporting-color;
+    }
+
+    div:nth-child(5n) {
+        background-color: $reporting-color;
+    }
+
+    div:nth-child(4n) {
+        background-color: $policy-color;
+    }
+    div:nth-child(25n) {
+        background-color: $policy-color;
+    }
+    div:nth-child(22n) {
+        background-color: $policy-color;
+    }
+
+    div:nth-child(11n) {
+        background-color: $policy-color;
+    }
+
+    div:nth-child(9n) {
+        background-color: $advocacy-color;
+    }
+    div:nth-child(10n) {
+        background-color: $advocacy-color;
+    }
+
+    div:nth-child(30n) {
+        background-color: $reporting-color;
+    }
+
+    div:nth-child(7n) {
+        background-color: $policy-color;
+    }
+
+}
+
+nav {
+    text-align:center;
+    @include margin-trailer(1);
+    a {
+        text-decoration:none;
+    }
+
+    .advocacy {
+        color: $advocacy-color;
+    }
+
+    .policy {
+        color: $policy-color;
+
+    }
+
+    .reporting {
+        color: $reporting-color;
+
+    }
+}
+
