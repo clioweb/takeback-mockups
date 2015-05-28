@@ -380,6 +380,29 @@ h1 {
   -webkit-align-items: flex-end;
   align-items: flex-end;
 }
+#banner p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-size: 2.22222em;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  line-height: 0;
+}
+#banner p i {
+  background-color: white;
+  display: block;
+  color: #503264;
+  font-style: normal;
+  font-size: 0.44444em;
+  line-height: 2.75em;
+  letter-spacing: normal;
+  font-weight: normal;
+  margin-top: 14px;
+}
 
 #items {
   font-size: 0;

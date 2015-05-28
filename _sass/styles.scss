@@ -61,7 +61,31 @@ h1 {
     height: 20vh;
     @include display-flex(flex);
     @include align-items(flex-end);
+
+    p {
+        text-align: center;
+        width: 100%;
+        margin:0;
+        color:white;
+        @include adjust-font-size-to(40px);
+        text-transform:uppercase;
+        letter-spacing: 1px;
+        font-weight:bold;
+        line-height:0;
+        i {
+            background-color: white;
+            display:block;
+            color: $link-color;
+            font-style:normal;
+            @include adjust-font-size-to(8px);
+            letter-spacing: normal;
+            font-weight:normal;
+            margin-top: 14px;
+        }
+
+    }
 }
+
 
 #items {
 font-size: 0; display: flex; flex-flow: row wrap;
