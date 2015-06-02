@@ -3,12 +3,11 @@ layout: default
 bodyclass: 'home'
 ---
 
-<ul class="posts">
-    {% for post in site.posts %}
-        <li>
-            <span class="eyebrow" aria-hidden="true">{{ post.category }}</span>
-            <a rel="permalink" href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-    {% endfor %}
+<ul>
+    <li><a href="browse.html">Browse</a></li>
+    <li><a href="browse-sort.html">Sorted Browse</a></li>
+    <li><a href="browse-event.html">Event Highlighted Browse</a></li>
+    <li><a href="browse-single-record.html">Single Record</a></li>
 </ul>
+
 

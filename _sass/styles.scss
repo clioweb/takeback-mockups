@@ -15,9 +15,9 @@ $link-hover-color               : darken($link-color, 10%);
 $link-focus-color               : $link-hover-color;
 $link-active-color              : $link-color;
 
-$advocacy-color: $link-color;
-$policy-color: darken(#38c, 10%);;
-$reporting-color: darken(#c50, 10%);
+$advocacy-color: lighten($link-color, 2%);
+$policy-color: lighten(#38c, 2%);
+$reporting-color: lighten(#8a0, 2%);
 
 @include establish-baseline();
 
@@ -40,6 +40,17 @@ h1 {
     color: $base-color-lighter;
     @include margin-leader(2);
     @include margin-trailer(2);
+}
+
+img {
+    max-width:100%;
+    width: auto;
+    height:auto;
+}
+
+#timeline {
+    max-width: 80%;
+    margin: 40px auto;
 }
 
 #main,
@@ -87,12 +98,12 @@ h1 {
 }
 
 
-#items {
-font-size: 0; display: flex; flex-flow: row wrap;
+#items, .items {
+    display: flex; flex-flow: row wrap;
 
     div {
-        width: 20px;
-        height: 30px;
+        width: 15px;
+        height: 22px;
         margin: 2px;
         background-color: $advocacy-color;
     }
@@ -137,6 +148,61 @@ font-size: 0; display: flex; flex-flow: row wrap;
         background-color: $policy-color;
     }
 
+}
+
+#items-single-record {
+    div {
+        background-color: #f3f3f3;
+        color: #222;
+        * {
+            display:none;
+        }
+
+        &:nth-child(45) {
+            width: 100%;
+            height: 40vh;
+            background-color: #f3f3f3;
+            margin: 20px 0;
+            padding: 20px;
+            * {
+                display:block;
+            }
+
+        }
+    }
+
+}
+
+#items-recede {
+    display: flex; flex-flow: row wrap;
+    div {
+        width: 15px;
+        height: 22px;
+        margin: 2px;
+        background-color: #ccc;
+    }
+}
+
+#items-sorted {
+    display: flex; flex-flow: row wrap;
+
+    div {
+        width: 15px;
+        height: 22px;
+        margin: 2px;
+    }
+
+    .advocacy {
+        background-color: $advocacy-color;
+    }
+
+    .policy {
+        background-color: $policy-color;
+    }
+
+    .reporting {
+        background-color: $reporting-color;
+    }
 }
 
 nav {
